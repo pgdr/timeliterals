@@ -6,14 +6,15 @@ The `timeliterals` module is a simple module containing literals
 * `hours`
 * `minutes`
 * `seconds`
-* `ms`
-* `us`
+* `milliseconds`
+* `microseconds`
 
 Can be used as
 
 ```python
 from timeliterals import *
-delta = 2 * hours - 14 * minutes + 10 * seconds + 140 * ms - 3 * us
+delta = 2 * hours - 14 * minutes + 10 * seconds
+delta += 140 * milliseconds - 3 * microseconds
 assert delta < 2 * hours
 ```
 
