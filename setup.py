@@ -5,6 +5,7 @@ setup(
     packages=[
         'timeliterals',
     ],
+    version='0.0.1',
     author='pgdr',
     author_email='pgdr@equinor.com',
     description="Time literals",
