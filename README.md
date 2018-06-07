@@ -1,4 +1,5 @@
-# timeliterals
+# timeliterals [![Build Status](https://travis-ci.org/pgdr/timeliterals.svg?branch=master)](https://travis-ci.org/pgdr/timeliterals)
+
 
 The `timeliterals` module is a simple module containing literals
 
