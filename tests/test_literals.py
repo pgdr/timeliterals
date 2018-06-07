@@ -6,7 +6,8 @@ import unittest
 
 class TestLiterals(unittest.TestCase):
     def test_literals(self):
-        delta = 2 * hours - 14 * minutes + 10 * seconds + 140 * ms - 3 * us
+        delta = 2 * hours - 14 * minutes + 10 * seconds \
+                + 140 * milliseconds - 3 * microseconds
         self.assertEqual(delta.total_seconds(), 6370.139997)
 
     def test_shorts(self):
