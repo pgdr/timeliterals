@@ -15,6 +15,10 @@ class TestLiterals(unittest.TestCase):
         self.assertTrue(1*h+30*m < delta < 2 * hours)
         self.assertEqual(delta.total_seconds(), 6360)
 
+    def test_mod(self):
+        import timeliterals as t
+        delta = 3*t.hours + 18*t.minutes
+        self.assertEqual(delta.total_seconds(), 11880)
 
 if __name__ == '__main__':
     unittest.main()

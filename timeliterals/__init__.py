@@ -24,3 +24,4 @@ ms = __l.ms
 us = __l.us
 
 __all__ = ['hours', 'minutes', 'seconds', 'ms', 'us']
+__version__ = '0.0.1'

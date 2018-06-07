@@ -8,4 +8,5 @@ setup(
     author='pgdr',
     author_email='pgdr@equinor.com',
     description="Time literals",
+    test_suite="tests",
 )
