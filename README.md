@@ -8,21 +8,31 @@ The `timeliterals` module is a simple module containing literals
 * `seconds`
 * `milliseconds`
 * `microseconds`
+* `days`
+* `weeks`
 
-Can be used as
+Can be used as a scalar or a function, for example `timedelta(seconds=5)` can be replaced by `seconds(5)` or `5 * seconds`.
 
 ```python
 from timeliterals import *
-delta = 2 * hours - 14 * minutes + 10 * seconds
-delta += 140 * milliseconds - 3 * microseconds
-assert delta < 2 * hours
+duration = 2 * hours - 14 * minutes  # timedelta
+duration += minutes(2)  # function
+assert 1 * hours + 30 * minutes < duration < 2 * hours
+assert duration / minutes == 108
+assert duration / seconds == 6480
+assert duration.total_seconds() == 6480
 ```
 
 ```python
-from timeliterals import hours as h, minutes as m
-delta = 2*h - 14*m
-assert 1*h+30*m < delta < 2 * hours
-assert delta.total_seconds() == 6360
+from timeliterals import *
+from datetime import timedelta
+assert hours(2) == timedelta(hours=2)
+```
+
+```python
+from timeliterals import hours as m, minutes as m, seconds as s, milliseconds as ms, microseconds as us
+duration = 2*h - 14*m + 10*s + 140*ms - 3*us
+assert duration < 2*h
 ```
 
 ## history
