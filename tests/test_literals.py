@@ -21,6 +21,11 @@ class TestLiterals(unittest.TestCase):
         import timeliterals as t
         delta = 3*t.hours + 18*t.minutes
         self.assertEqual(delta.total_seconds(), 11880)
+    
+    def test_function(self):
+        from datetime import timedelta
+        self.assertEqual(timedelta(hours=5), hours(5))
+        self.assertTrue(isinstance(hours, timedelta))
 
 if __name__ == '__main__':
     unittest.main()
